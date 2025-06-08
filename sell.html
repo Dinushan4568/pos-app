@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dashboard</title>
+  <title>Sell Item</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,12 +11,14 @@
     <a href="sell.html">Sell</a>
   </nav>
   <div class="container">
-    <h1>Dashboard</h1>
-    <div id="dashboard-details">
-      <!-- Daily stats will be shown here -->
-    </div>
+    <h1>Sell Item</h1>
+    <ul id="sell-inventory-list"></ul>
+    <h2>Cart</h2>
+    <ul id="sell-cart"></ul>
+    <p>Total: $<span id="sell-total">0</span></p>
+    <button id="sell-checkout">Checkout</button>
   </div>
   <script src="firebase-config.js"></script>
-  <script src="dashboard.js"></script>
+  <script src="sell.js"></script>
 </body>
 </html>
