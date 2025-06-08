@@ -5,10 +5,19 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav>
-    <a href="index.html">Dashboard</a>
-    <a href="inventory.html">Inventory</a>
-    <a href="sell.html">Sell</a>
+  <nav class="main-nav">
+    <div class="nav-logo">
+      <img src="logo.png" alt="Logo" style="height:40px; vertical-align:middle; margin-right:12px;">
+      <span class="nav-title">BLUE TAG SHOE SHOP</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Dashboard</a>
+      <a href="inventory.html">Inventory</a>
+      <a href="sell.html">Sell Item</a>
+      <a href="#" style="pointer-events:none;opacity:0.5;">Sale History</a>
+      <a href="#" style="pointer-events:none;opacity:0.5;">Account</a>
+    </div>
+    <button class="logout-btn">🔑 Logout</button>
   </nav>
   <div class="container">
     <h1 style="text-align:left; color:#3d32c9; margin-bottom:24px;">Inventory Management</h1>
