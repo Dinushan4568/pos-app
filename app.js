@@ -28,14 +28,8 @@ function checkout() {
     cart: cart,
     total: total,
     timestamp: new Date()
-  })
-  .then(() => {
-    alert("Sale saved!");
-    cart = [];
-    total = 0;
-    updateCart();
-  })
-  .catch(error => {
-    console.error("Error saving sale: ", error);
-  });
+})
+.then(() => { alert("Sale saved!"); })
+.catch(error => { console.error("Error: ", error); });
+
 }
