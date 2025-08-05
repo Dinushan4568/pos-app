@@ -20,7 +20,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'export') {
     if (canExportDatabase()) {
         $result = exportDatabase();
         if ($result['success']) {
-            $message = "Database exported successfully to G:\\My Drive\\Shop Database\\" . $result['filename'];
+            $message = "Database exported successfully to database/backups/" . $result['filename'];
             // Generate WhatsApp notification URL
             $whatsappUrl = sendWhatsAppNotification($result['filename']);
         } else {
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['import'])) {
 
 function exportDatabase() {
     $sourceFile = 'database/pos_shoeshop.db';
-    $exportDir = 'G:\\My Drive\\Shop Database\\';
+    $exportDir = 'database/backups/';
     $timestamp = date('Y-m-d_H-i-s');
     $filename = "pos_shoeshop_backup_{$timestamp}.db";
     $destinationFile = $exportDir . $filename;
@@ -138,7 +138,7 @@ $lastModified = file_exists('database/pos_shoeshop.db') ? date('Y-m-d H:i:s', fi
             </div>
             <div class="bg-purple-50 p-4 rounded-lg">
                 <h3 class="text-sm font-medium text-purple-800">Export Location</h3>
-                <p class="text-sm font-semibold text-purple-900">G:\My Drive\Shop Database\</p>
+                <p class="text-sm font-semibold text-purple-900">database/backups/</p>
             </div>
         </div>
     </div>
@@ -151,7 +151,7 @@ $lastModified = file_exists('database/pos_shoeshop.db') ? date('Y-m-d H:i:s', fi
                 <div class="bg-blue-50 p-4 rounded-lg">
                     <h3 class="text-sm font-medium text-blue-800 mb-2">Export Details</h3>
                     <ul class="text-sm text-blue-700 space-y-1">
-                        <li>• Database will be copied to: <strong>G:\My Drive\Shop Database\</strong></li>
+                        <li>• Database will be copied to: <strong>database/backups/</strong></li>
                         <li>• Filename format: <strong>pos_shoeshop_backup_YYYY-MM-DD_HH-MM-SS.db</strong></li>
                         <li>• WhatsApp notification will be sent to: <strong>0716662848</strong></li>
                         <li>• Available to: <strong><?php echo getRoleDisplayName(getUserRole()); ?></strong></li>
