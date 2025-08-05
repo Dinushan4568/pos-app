@@ -1,0 +1,33 @@
+# Database backup files
+database/backups/
+database/*backup*.db
+
+# SQLite journal and temporary files
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
+# Temporary files
+*.tmp
+*.temp
+
+# PHP temporary files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
