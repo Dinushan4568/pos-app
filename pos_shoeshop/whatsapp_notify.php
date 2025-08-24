@@ -5,7 +5,7 @@
 function sendWhatsAppNotification($filename, $phone = '0716662848') {
     $message = "Database exported successfully!\n\n";
     $message .= "File: {$filename}\n";
-    $message .= "Location: G:\\My Drive\\Shop Database\\\n";
+    $message .= "Location: database/backups/\n";
     $message .= "Time: " . date('Y-m-d H:i:s') . "\n";
     $message .= "User: " . ($_SESSION['user'] ?? 'Unknown');
     
